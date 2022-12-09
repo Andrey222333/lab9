@@ -15,7 +15,7 @@
         $x = -10;
         $encouting = 100;
         $step = 2;
-        $type = 'E';
+        $type = 'D';
         $min_value = -40;
         $max_value = 2000;
         $min = 100000000000;
@@ -58,7 +58,30 @@
 
            if ($x <= 10){
                 if ($x == 5){
-                    continue;
+                    $f='error';
+                    switch ($type) {
+                        case 'A':
+                            echo 'f('.$x.')='.$f.'<br>';
+                            break;
+                        case "B":
+                            echo '<li>f('.$x.')='.$f.'</li>';
+                            break;
+                        case "C":
+                            echo '<li>f('.$x.')='.$f.'</li>';
+                            break;
+                        case "D":
+                            echo '<tr>';
+                            echo '<td>'.$count.'</td>';
+                            echo '<td>'.$x.'</td>';
+                            echo '<td>'.$f.'</td>';
+                            echo '</tr>';
+                            break;
+                        case "E":
+                            echo '<div class="E"><p>f('.$x.')='.$f.'</p></div>';
+                            break;
+                    }
+                    $x += $step;
+                    continue;        
                 }else {
                     $f = round(((6/($x-5))*$x-5), 3);
                 }
