@@ -12,7 +12,7 @@
     </header>
     <main class="body">
         <?php
-        $x = -10;
+        $x = -11;
         $encouting = 100;
         $step = 2;
         $type = 'D';
@@ -136,6 +136,29 @@
 
            if ($x <= 10){
                 if ($x == 5){
+                    $f='error';
+                    switch ($type) {
+                        case 'A':
+                            echo 'f('.$x.')='.$f.'<br>';
+                            break;
+                        case "B":
+                            echo '<li>f('.$x.')='.$f.'</li>';
+                            break;
+                        case "C":
+                            echo '<li>f('.$x.')='.$f.'</li>';
+                            break;
+                        case "D":
+                            echo '<tr>';
+                            echo '<td>'.$count.'</td>';
+                            echo '<td>'.$x.'</td>';
+                            echo '<td>'.$f.'</td>';
+                            echo '</tr>';
+                            break;
+                        case "E":
+                            echo '<div class="E"><p>f('.$x.')='.$f.'</p></div>';
+                            break;
+                    }
+                    $x += $step;
                     continue;
                 }else {
                     $f = round(((6/($x-5))*$x-5), 3);
@@ -188,6 +211,29 @@
 
             if ($x <= 10){
                 if ($x == 5){
+                    $f='error';
+                    switch ($type) {
+                        case 'A':
+                            echo 'f('.$x.')='.$f.'<br>';
+                            break;
+                        case "B":
+                            echo '<li>f('.$x.')='.$f.'</li>';
+                            break;
+                        case "C":
+                            echo '<li>f('.$x.')='.$f.'</li>';
+                            break;
+                        case "D":
+                            echo '<tr>';
+                            echo '<td>'.$count.'</td>';
+                            echo '<td>'.$x.'</td>';
+                            echo '<td>'.$f.'</td>';
+                            echo '</tr>';
+                            break;
+                        case "E":
+                            echo '<div class="E"><p>f('.$x.')='.$f.'</p></div>';
+                            break;
+                    }
+                    $x += $step;
                     continue;
                 }else {
                     $f = round(((6/($x-5))*$x-5), 3);
